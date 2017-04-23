@@ -1,0 +1,171 @@
+html {
+	font: 14px Verdana,Arial,Helvetica,sans-serif;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #ffffff;
+}
+
+header, section, footer {
+	position: relative;
+}
+
+header {
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-size: cover;
+    background-image: url(../img/320.jpg);
+    display: table;
+    text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	header {
+		background-image: url(../img/768.jpg);
+	}
+}
+
+@media (min-width: 1024px) {
+	header {
+		background-image: url(../img/1900.jpg);
+	}
+}
+
+header img {
+	width: 25vw;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+header ul {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+header ul li {
+	width: 100%;
+	text-align: right;
+}
+
+.row {
+	width: 100%;
+	display: table-row;
+}
+
+header div.vcenter {
+	width: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+header a {
+	color: #ffffff;
+}
+
+.panel {
+	width: 75%;
+	margin: 0.2em auto;
+	padding: 1.5em;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	font-size: 1.2em;
+	color: #ffffff;
+	background-color: rgba(0,0,0,0.7) !important;
+}
+
+#menu {
+	padding: 0.5em;
+	border-radius: 10px; 
+	-moz-border-radius: 10px; 
+	-webkit-border-radius: 10px;
+	background-color: rgba(0,0,0,0.2);
+	position: fixed;
+	top: 5px;
+	right: 5px;
+	z-index: 999;
+}
+
+#menu:hover {
+	background-color: rgba(0,0,0,0.8);
+}
+
+#menu ul {
+	margin: 0;
+	padding: 0;
+	color: #ffffff;
+	font-size: 0.7em;
+	list-style: none;
+}
+
+#menu ul li {
+	margin: 0;
+	padding: 0;
+}
+
+#menu a {
+	color: #ffffff;
+}
+
+#menu a:hover, #menu a:focus {
+	color: #f6a704;
+}
+
+h1 {
+	text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 0.5em 0;
+	font-weight: bold;
+}
+
+a {
+	color: #003057;
+}
+
+a:hover, a:focus {
+	color: #00a9e0;
+}
+
+p {
+	padding: 0.25em 0;
+}
+
+section {
+	margin-top: 15px;
+	padding: 1.5em;
+	-webkit-box-shadow: 0px 10px 15px #888;
+	-moz-box-shadow: 0px 10px 15px #888;
+	box-shadow: 0px 10px 15px #888;
+}
+
+section.impar {
+	background-color: #eeeeee;
+}
+
+article {
+	padding: 1.2em 0;
+}
+
+footer {
+	padding: 1.5em 0;
+	background-color: #f6a704;
+	text-align: center;
+}
+
+footer table {
+	width: 100%;
+}
+
+footer td, footer th {
+	text-align: center;
+}
