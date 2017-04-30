@@ -12,10 +12,84 @@
 		<h1>Sudoku <small>by Juli&aacute;n Rojas</small></h1>
 	</header>
 	<section id="tablero">
-		<h2>Tablero</h2>
+		<div class="well">
+			<h4>Reglas:</h4>
+			<ol>
+				<li>No se puede repetir digito en la misma columna.</li>
+				<li>No se puede repetir digito en la misma fila.</li>
+				<li>No se puede repetir digito en el mismo cuadrante de 3x3.</li>
+			</ol>
+		</div>
 	</section>
+	<section>
+		<div class="row">
+			<div class="form-group col-sm-offset-3 col-sm-2 text-center">
+				<button id="btn-validar" type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="si tiene alg&uacute;n error, lo se&ntilde;ala...">
+					<span class="glyphicon glyphicon-search" aria-hidden="true"></span> validar
+				</button>
+			</div>
+			<div class="form-group col-sm-2 text-center">
+				<button id="btn-resolver" type="button" class="btn btn-primary" data-loading-text="calculando..." data-toggle="tooltip" data-placement="top" title="intenta resolver el tablero, generalmente no lo logra, pero ayuda...">
+					<span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span> resolver
+				</button>
+			</div>
+			<div class="form-group col-sm-2 text-center">
+				<button id="btn-limpiar" type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="no hay mucho que decir...">
+					<span class="glyphicon glyphicon-fire" aria-hidden="true"></span> limpiar tablero
+				</button>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="row">
+			<div class="col-sm-offset-2 col-sm-8 text-center">
+				<h4>UNIR - Computación en el Cliente Web - Laboratorio</h4>
+				<p>Profesora Natalia Padilla Zea</p>
+				<p>todos los derechos reservados | Bogot&aacute; - Colombia</p>
+			</div>
+		</div>
+	</footer>
+	<div id="fail" class="modal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+		<div class="modal-dialog animated slideInUp">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-sm-offset-2 col-sm-2 text-center text-danger">
+							<h1><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span></h1>
+						</div>
+						<div class="col-sm-6">
+							<p>No se logr&oacute; encontrar una soluci&oacute;n completa para el tablero. La debe ajustar por su cuenta.</p>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="pass" class="modal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+		<div class="modal-dialog animated slideInUp">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-sm-offset-2 col-sm-2 text-center text-success">
+							<h1><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></h1>
+						</div>
+						<div class="col-sm-6">
+							<h2>Soluci&oacute;n completa.</h2>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 	<script type="text/javascript" src="js/sudoku.js"></script>
 </body>
 </html>
