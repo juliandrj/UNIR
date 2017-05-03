@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>CalculadoraServlet</servlet-name>
+  	<display-name>CalculadoraServlet</display-name>
+  	<description></description>
+  	<servlet-class>es.edu.unir.calculadora.CalculadoraServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>CalculadoraServlet</servlet-name>
+  	<url-pattern>/calcular.json</url-pattern>
+  </servlet-mapping>
 </web-app>
