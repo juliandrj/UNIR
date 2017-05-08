@@ -47,7 +47,7 @@ var limpiarTablero = function () {
 var agregarValoresAleatorios = function (x, y) {
 	//indices aleatorios
 	var index = [];
-	for (var i = 0; i < _.random(1, 5); i++) {
+	for (var i = 0; i < _.random(1, 2); i++) {
 		index.push(_.random(1, 9));
 	}
 	//retiro duplicados
@@ -70,6 +70,25 @@ var agregarValoresAleatorios = function (x, y) {
 		}
 		i++;
 	});
+};
+var contarPistas = function () {
+	var n = 0;
+	$('#tablero input.form-control').each(function () {
+		if (!_.isUndefined($(this).attr('readonly'))) {
+			n++;
+		}
+	});
+	return n;
+};
+var llenarTablero = function () {
+	for (var i = 1; i <= 3; i++) {
+		for (var j = 1; j <= 3; j++) {
+			if (contarPistas() >= 12) {
+				return;
+			}
+			agregarValoresAleatorios(i, j);
+		}
+	}
 };
 var resolver = function (posicion, tipoEstructura) {
 	var tipo = undefined;
@@ -132,11 +151,7 @@ $(document).ready(function () {
 			$renglon.append('<td class="row_' + i + ' col_' + j + ' cell_' + n + m + ' ' + (x ? 'active' : '') + '" data-row="' + i + '" data-col="' + j + '" data-cell="' + n + m + '"><input class="form-control text-center" type="text" value="" maxlength="1"/></td>');
 		}
 	}
-	for (var i = 1; i <= 3; i++) {
-		for (var j = 1; j <= 3; j++) {
-			agregarValoresAleatorios(i, j);
-		}
-	}
+	llenarTablero();
 	//FIN TABLERO
 	var inputs = $('#tablero td input.form-control');
 	//Esta porcion evita que se digiten caracteres diferentes a numeros.

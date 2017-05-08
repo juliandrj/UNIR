@@ -6,6 +6,13 @@
 	<title>Sudoku</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<style type="text/css">
+		input.form-control:read-only {
+			background-color: #000000;
+			color: #ffffff;
+			font-weight: bold;
+		}
+	</style>
 </head>
 <body class="container">
 	<header class="page-header">
@@ -29,7 +36,7 @@
 				</button>
 			</div>
 			<div class="form-group col-sm-2 text-center">
-				<button id="btn-resolver" type="button" class="btn btn-primary" data-loading-text="calculando..." data-toggle="tooltip" data-placement="top" title="intenta resolver el tablero, generalmente no lo logra, pero ayuda...">
+				<button id="btn-resolver" type="button" class="btn btn-primary" data-loading-text="calculando..." data-toggle="tooltip" data-placement="top" title="intenta resolver el tablero, generalmente no lo logra, pero ayuda... si no entrega una soluci&oacute;n completa, intenta de nuevo">
 					<span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span> resolver
 				</button>
 			</div>
