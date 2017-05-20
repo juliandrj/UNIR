@@ -1,0 +1,114 @@
+<?php
+$title = 'Sudoku, by Julian Rojas';
+$this->headTitle($title);
+$this->headLink()->appendStylesheet('/css/animate.css');
+$this->headScript()->appendFile('/js/underscore.js');
+$this->headScript()->appendFile('/js/sudoku.js');
+?>
+<div class="container">
+	<header class="page-header">
+		<h1>Sudoku <small>by Juli&aacute;n Rojas</small></h1>
+		<h5><small>id asignado: </small><?php echo $maquina->codigo_maquina; ?></h5>
+	</header>
+	<section id="tablero">
+		<div class="well">
+			<h4>Reglas:</h4>
+			<ol>
+				<li>No se puede repetir digito en la misma columna.</li>
+				<li>No se puede repetir digito en la misma fila.</li>
+				<li>No se puede repetir digito en el mismo cuadrante de 3x3.</li>
+			</ol>
+		</div>
+	</section>
+	<section>
+		<div class="row">
+			<div class="form-group col-sm-offset-1 col-sm-2 text-center">
+				<button id="btn-validar" type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="si tiene alg&uacute;n error, lo se&ntilde;ala...">
+					<span class="glyphicon glyphicon-search" aria-hidden="true"></span> validar
+				</button>
+			</div>
+			<div class="form-group col-sm-2 text-center">
+				<button id="btn-resolver" type="button" class="btn btn-primary" data-loading-text="calculando..." data-toggle="tooltip" data-placement="top" title="intenta resolver el tablero, generalmente no lo logra, pero ayuda... si no entrega una soluci&oacute;n completa, intenta de nuevo">
+					<span class="glyphicon glyphicon-check" aria-hidden="true"></span> resolver
+				</button>
+			</div>
+			<div class="form-group col-sm-2 text-center">
+				<button id="btn-limpiar" type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="no hay mucho que decir...">
+					<span class="glyphicon glyphicon-fire" aria-hidden="true"></span> limpiar tablero
+				</button>
+			</div>
+			<div class="form-group col-sm-2 text-center">
+				<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#partidas-mdl">
+					<span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> partidas guardadas
+				</button>
+			</div>
+			<div class="form-group col-sm-2 text-center">
+				<button id="btn-salvar" type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="guarda la partida...">
+					<span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> salvar
+				</button>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="row">
+			<div class="col-sm-offset-2 col-sm-8 text-center">
+				<h4>UNIR - Computaci&oacute;n en el Servidor Web - Laboratorio</h4>
+				<p>Profesor Javier Cubo Villalba</p>
+				<p>todos los derechos reservados | Bogot&aacute; - Colombia</p>
+			</div>
+		</div>
+	</footer>
+	<div id="fail" class="modal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+		<div class="modal-dialog animated slideInUp">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-sm-offset-2 col-sm-2 text-center text-danger">
+							<h1><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span></h1>
+						</div>
+						<div class="col-sm-6">
+							<p>No se logr&oacute; encontrar una soluci&oacute;n completa para el tablero. La debe ajustar por su cuenta.</p>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="pass" class="modal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+		<div class="modal-dialog animated slideInUp">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-sm-offset-2 col-sm-2 text-center text-success">
+							<h1><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></h1>
+						</div>
+						<div class="col-sm-6">
+							<h2>Soluci&oacute;n completa.</h2>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="partidas-mdl" class="modal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+		<div class="modal-dialog animated slideInUp">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Partidas guardadas</h4>
+				</div>
+				<div class="modal-body">
+					<ul id="partidas-list"></ul>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
