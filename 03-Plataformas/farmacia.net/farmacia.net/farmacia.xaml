@@ -1,0 +1,35 @@
+﻿<Window x:Class="farmacia.net.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:farmacia.net"
+        mc:Ignorable="d"
+        Title="Farmacia UNIR by Julián Rojas" Height="299.893" Width="525">
+    <Grid>
+        <Label Content="Pedido de medicamentos" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="497" FontSize="24"/>
+        <TextBox x:Name="nombreMedicamento" HorizontalAlignment="Left" Height="23" Margin="210,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="297" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Nombre del medicamento:" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" Width="200"/>
+        <Label Content="Tipo de medicamento:" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Width="200"/>
+        <ComboBox Text="seleccione un tipo de medicamento..." x:Name="tipoMedicamento" HorizontalAlignment="Left" Margin="210,88,0,0" VerticalAlignment="Top" Width="297" SelectionChanged="tipoMedicamento_SelectionChanged">
+            <ComboBoxItem Name="analgesico">Analgésico</ComboBoxItem>
+            <ComboBoxItem Name="analeptico">Analéptico</ComboBoxItem>
+            <ComboBoxItem Name="anestesico">Anestésico</ComboBoxItem>
+            <ComboBoxItem Name="antiacido">Antiácido</ComboBoxItem>
+            <ComboBoxItem Name="antidepresivo">Antidepresivo</ComboBoxItem>
+            <ComboBoxItem Name="antibiotico">Antibiótico</ComboBoxItem>
+        </ComboBox>
+        <Label Content="Cantidad (unidades):" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" Width="200"/>
+        <TextBox x:Name="cantidad" HorizontalAlignment="Left" Height="23" Margin="210,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="297" TextChanged="TextBox_TextChanged_1"/>
+        <RadioButton x:Name="distribuidorRdb1" Content="EMPSEPHAR" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="324,146,0,0"/>
+        <RadioButton x:Name="distribuidorRdb2" Content="CEMEFAR" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="440,146,0,0"/>
+        <RadioButton x:Name="distribuidorRdb" Content="COFARMA" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="210,146,0,0" Checked="RadioButton_Checked"/>
+        <Label Content="Distribuidor:" HorizontalAlignment="Left" Margin="10,143,0,0" VerticalAlignment="Top" Width="200"/>
+        <Label Content="Sucursal entrega:" HorizontalAlignment="Left" Margin="10,174,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="principalChk" Content="PRINCIPAL" HorizontalAlignment="Left" Margin="210,179,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="secundariaChk" Content="SECUNDARIA" HorizontalAlignment="Left" Margin="324,179,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="borrarBtn" Content="Borrar" HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top" Width="228" Click="borrarBtn_Click"/>
+        <Button x:Name="okBtn" Content="OK" HorizontalAlignment="Left" Margin="279,232,0,0" VerticalAlignment="Top" Width="228" Click="okBtn_Click"/>
+
+    </Grid>
+</Window>

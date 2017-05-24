@@ -1,0 +1,16 @@
+D:\home\UNIR\03-Plataformas\farmacia.net\farmacia.net\bin\Debug\farmacia.net.exe.config
+D:\home\UNIR\03-Plataformas\farmacia.net\farmacia.net\bin\Debug\farmacia.net.exe
+D:\home\UNIR\03-Plataformas\farmacia.net\farmacia.net\bin\Debug\farmacia.net.pdb
+D:\home\UNIR\03-Plataformas\farmacia.net\farmacia.net\obj\Debug\farmacia.net.csprojResolveAssemblyReference.cache
+D:\home\UNIR\03-Plataformas\farmacia.net\farmacia.net\obj\Debug\farmacia.g.cs
+D:\home\UNIR\03-Plataformas\farmacia.net\farmacia.net\obj\Debug\App.g.cs
+D:\home\UNIR\03-Plataformas\farmacia.net\farmacia.net\obj\Debug\farmacia.net_MarkupCompile.cache
+D:\home\UNIR\03-Plataformas\farmacia.net\farmacia.net\obj\Debug\farmacia.net_MarkupCompile.lref
+D:\home\UNIR\03-Plataformas\farmacia.net\farmacia.net\obj\Debug\farmacia.baml
+D:\home\UNIR\03-Plataformas\farmacia.net\farmacia.net\obj\Debug\farmacia.net.g.resources
+D:\home\UNIR\03-Plataformas\farmacia.net\farmacia.net\obj\Debug\farmacia.net.Properties.Resources.resources
+D:\home\UNIR\03-Plataformas\farmacia.net\farmacia.net\obj\Debug\farmacia.net.csproj.GenerateResource.Cache
+D:\home\UNIR\03-Plataformas\farmacia.net\farmacia.net\obj\Debug\farmacia.net.exe
+D:\home\UNIR\03-Plataformas\farmacia.net\farmacia.net\obj\Debug\farmacia.net.pdb
+D:\home\UNIR\03-Plataformas\farmacia.net\farmacia.net\obj\Debug\pedido.g.cs
+D:\home\UNIR\03-Plataformas\farmacia.net\farmacia.net\obj\Debug\pedido.baml
